@@ -24,7 +24,6 @@ public class Play extends Activity implements View.OnClickListener {
     int cupier_card_value = 0;
     Card card;
     int repe;
-    int what_check=0;
     ArrayList<Card> my_used_cards = new ArrayList<>();
     ArrayList<Card> used_cards = new ArrayList<>();
     ArrayList<Card> cupier_used_cards = new ArrayList<>();

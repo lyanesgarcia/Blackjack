@@ -13,21 +13,14 @@ public class Card {
     private Integer cardID;
     private boolean flippedUp;
 
-    public Card(int suit, int value/*, boolean flippedUp*/) {
+    public Card(int suit, int value) {
         this.suit = suit;
         this.value = value;
-       /* this.flippedUp = flippedUp;*/
-        setImage();
-    }
-
-    void flip(){
-        flippedUp=!flippedUp;
         setImage();
     }
 
     public Integer setImage() {
         cardID = null;
-        //if(flippedUp){
             switch (suit)
             {
                 case 0:{ //clubs
@@ -159,8 +152,6 @@ public class Card {
                 }
                 }
 
-
-            //}
         return cardID;
     }
 
