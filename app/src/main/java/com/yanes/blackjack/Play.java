@@ -171,7 +171,6 @@ public class Play extends Activity implements View.OnClickListener {
 
                    back();
                 } else {
-Log.i("hhh", "h"+my_ases_cards.size());
                     for(int i=0; i<my_ases_cards.size(); i++) {
                         if (my_card_value > 21) {
                             my_card_value -= 10;
@@ -199,13 +198,13 @@ Log.i("hhh", "h"+my_ases_cards.size());
 
 
             if ((cupier_card_value > my_card_value) && (cupier_card_value <= 21)) {
-                Toast.makeText(this, "LOST" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
             } else if (cupier_card_value == my_card_value) {
                     total_money += game_money;
-                Toast.makeText(this, "Empate" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Tie", Toast.LENGTH_SHORT).show();
             } else {
                     total_money += game_money * 2;
-                Toast.makeText(this, "Win" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Win", Toast.LENGTH_SHORT).show();
             }
 
             back();
@@ -260,7 +259,7 @@ Log.i("hhh", "h"+my_ases_cards.size());
 
                     total_money += game_money;
 
-                Toast.makeText(this, "Empate" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Tie" , Toast.LENGTH_SHORT).show();
             } else if(my_card_value>21){
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
                     total_money -= game_money;
@@ -269,11 +268,11 @@ Log.i("hhh", "h"+my_ases_cards.size());
 
             } else if ((cupier_card_value > my_card_value) && (cupier_card_value <= 21)) {
                     total_money -= game_money;
-                Toast.makeText(this, "LOST" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
 
             } else if ((cupier_card_value < my_card_value && my_card_value<= 21) ||(my_card_value<= 21 && cupier_card_value>21 )){
                     total_money += game_money * 3;
-                Toast.makeText(this, "Win" + total_money, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Win", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this,"Error", Toast.LENGTH_LONG).show();
             }
@@ -302,7 +301,7 @@ Log.i("hhh", "h"+my_ases_cards.size());
         cupiercards.setText("" + cupier_card_value);
 
         setResult(RESULT_OK, intent1);
-        //super.onBackPressed();
+        super.onBackPressed();
     }
 
     public void azar() {
@@ -359,21 +358,13 @@ Log.i("hhh", "h"+my_ases_cards.size());
         return b;
     }
 
-    public void bigger(){
-
-    }
-    public void check(){
-
-
-
-    }
 
 
 
     @Override
     public void onBackPressed() {
-        //Toast.makeText(this, "You cannot leave this page until the game is over!", Toast.LENGTH_SHORT).show();
-        super.onBackPressed();
+        Toast.makeText(this, "You cannot leave this page until the game is over!", Toast.LENGTH_SHORT).show();
+
     }
 }
 

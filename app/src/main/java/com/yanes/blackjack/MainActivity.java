@@ -124,5 +124,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
             startActivity(intent);
             return true;
         }
-        return super.onOptionsItemSelected(item);}
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_ADD) {
+
+
+            if (resultCode == RESULT_CANCELED) {
+                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+                return;
+            } else if (resultCode == RESULT_OK) {
+
+                String t_money = data.getStringExtra(STotalMoney);
+                String g_money = data.getStringExtra(SGameMoney);
+                TextView totalmoney= (TextView) findViewById(R.id.totalmoney);
+                TextView gamemoney= (TextView) findViewById(R.id.gamemoney);
+
+                totalmoney.setText("" + t_money);
+                gamemoney.setText(""+ g_money);
+
+
+
+                total_money= Integer.parseInt(t_money);
+                game_money= Integer.parseInt(g_money);
+
+
+
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }

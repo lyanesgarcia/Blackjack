@@ -1,9 +1,6 @@
 package com.yanes.blackjack;
 
 
-/**
- * Created by claud on 1/31/2018.
- */
 
 public class Card {
 
