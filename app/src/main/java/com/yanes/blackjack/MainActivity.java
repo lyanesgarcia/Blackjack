@@ -141,7 +141,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
             if (resultCode == RESULT_CANCELED) {
-                Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cancelled ", Toast.LENGTH_SHORT).show();
                 return;
             } else if (resultCode == RESULT_OK) {
 
