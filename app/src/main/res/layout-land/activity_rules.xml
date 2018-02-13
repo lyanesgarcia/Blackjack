@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BFFBBE">
+        >
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/tinformation"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=" Blackjack is the second most popular gambling card game in the world.\n
+The rules are simple, the play is thrilling, and there is opportunity for high strategy.\n
+Blackjack is played with a standard international deck of cards with the Jokers removed, leaving 52 cards.\n
+Each participant attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.\n
+The numeral cards 2 to 10 have their face values, Jacks, Queens and Kings are valued at 10. In the dealer's deck, the Aces is always 11. While in the player's deck of cards, the Aces can have a value of either 1 or 11.
+To be more precise, the Ace is always valued at 11 unless that would result in the hand going over 21, in which case it is valued as 1.\n
+Before the deal begins, each player places a bet, in chips, in front of him in the designated area."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout></ScrollView>
