@@ -1,5 +1,8 @@
 package com.yanes.blackjack;
 
+/**
+ * Created by Claudia and Lidia Yanes.
+ */
 
 
 public class Card {

@@ -1,5 +1,9 @@
 package com.yanes.blackjack;
 
+/**
+ * Created by Claudia and Lidia Yanes.
+ */
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;

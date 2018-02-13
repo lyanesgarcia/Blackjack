@@ -1,5 +1,9 @@
 package com.yanes.blackjack;
 
+/**
+ * Created by Claudia and Lidia Yanes.
+ */
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,18 +51,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         TextView totalmoney= (TextView) findViewById(R.id.totalmoney);
-
         TextView gamemoney= (TextView) findViewById(R.id.gamemoney);
         ImageView image = (ImageView) findViewById(R.id.bmycoin);
-        if (view.getId() == R.id.ballin && total_money>0) {
 
-            game_money=total_money;
-            total_money =0;
-            image.setImageResource(0);
-            Intent intent = new Intent(this, Play.class);
-            intent.putExtra(SGameMoney, game_money);
-            intent.putExtra(STotalMoney,total_money);
-            startActivityForResult(intent, REQUEST_CODE_ADD);
+        if (view.getId() == R.id.ballin ) {
+            total_money+= game_money;
+            game_money=0;
+            if(total_money>0) {
+                game_money = total_money;
+                total_money = 0;
+                image.setImageResource(0);
+                Intent intent = new Intent(this, Play.class);
+                intent.putExtra(SGameMoney, game_money);
+                intent.putExtra(STotalMoney, total_money);
+                startActivityForResult(intent, REQUEST_CODE_ADD);
+
+            } else {
+                Toast.makeText(this,"You do not have enough money!",Toast.LENGTH_SHORT). show();}
 
         } else if (view.getId() == R.id.bdeal) {
             if ((game_money!=0)){
@@ -148,7 +157,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 total_money= Integer.parseInt(t_money);
                 game_money= Integer.parseInt(g_money);
-
 
 
             }

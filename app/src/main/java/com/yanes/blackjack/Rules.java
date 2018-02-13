@@ -4,9 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by claud on 2/12/2018.
+ * Created by Claudia and Lidia Yanes.
  */
-
 public class Rules extends Activity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
