@@ -172,8 +172,12 @@ public class Play extends Activity implements View.OnClickListener {
                 if (AS == false) {
 
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
-
-                   back();
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    back();
                 } else {
                     for(int i=0; i<my_ases_cards.size(); i++) {
                         if (my_card_value > 21) {
@@ -210,7 +214,11 @@ public class Play extends Activity implements View.OnClickListener {
                     total_money += game_money * 2;
                 Toast.makeText(this, "Win", Toast.LENGTH_SHORT).show();
             }
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             back();
 
         } else if (view.getId() == R.id.bdouble) {
@@ -267,7 +275,11 @@ public class Play extends Activity implements View.OnClickListener {
             } else if(my_card_value>21){
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
                     total_money -= game_money;
-
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                     back();
 
             } else if ((cupier_card_value > my_card_value) && (cupier_card_value <= 21)) {
@@ -280,7 +292,11 @@ public class Play extends Activity implements View.OnClickListener {
             }else{
                 Toast.makeText(this,"Error", Toast.LENGTH_LONG).show();
             }
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             back();
         }
 
