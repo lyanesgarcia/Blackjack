@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFFBBE">
+    android:background="#BFFBBE"
+    android:orientation="vertical">
 
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="6">
     <TextView
         android:id="@+id/totalmoney"
         android:layout_width="wrap_content"
@@ -19,199 +25,134 @@
         android:layout_marginTop="8dp"
         android:text="5000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <ImageButton
-        android:id="@+id/bdeal"
-        android:layout_width="111dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/ballin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/deal"
-        android:text="Deal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.808"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
-
-    <TextView
-        android:id="@+id/tdeal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Deal"
-        android:textColor="#000"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
-
+        android:layout_weight="1" />
     <ImageButton
         android:id="@+id/ballin"
-        android:layout_width="71dp"
-        android:layout_height="94dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="70dp"
+        android:layout_height="108dp"
         android:src="@drawable/allin"
         android:text="All in"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="3.5"
+        android:background="#BFFBBE" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tallin"
-        android:layout_width="69dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="All in"
-        android:textColor="#000"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
-
+        <TextView
+            android:id="@+id/tallin"
+            android:layout_width="match_parent"
+            android:text="All in"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3">
     <ImageButton
         android:id="@+id/breset"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
         android:src="@drawable/reset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.221"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
-
-    <TextView
-        android:id="@+id/treset"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Reset"
-        android:textColor="#000"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.599" />
-
-    <ImageButton
-        android:id="@+id/b500"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/fivehundred"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/treset"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/b100"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
-        android:src="@drawable/onehundred"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/b500"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/b10"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
-        android:src="@drawable/ten"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/b100"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageButton
-        android:id="@+id/b1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="332dp"
-        android:src="@drawable/one"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/b10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        android:layout_weight="1"
+        android:background="#BFFBBE"/>
     <ImageView
         android:id="@+id/bmycoin"
         android:layout_width="80dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tallin"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:background="#BFFBBE"/>
+    <ImageButton
+        android:id="@+id/bdeal"
+        android:layout_width="111dp"
+        android:layout_height="80dp"
+        android:src="@drawable/deal"
+        android:layout_weight="1"
+        android:background="#BFFBBE"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/treset"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Reset"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:layout_weight="0.85"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/gamemoney"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text=""
+            android:layout_weight="1.20"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/tdeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deal"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:layout_weight="0.85"
+            android:gravity="center"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/gamemoney"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/b10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.61"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmycoin"
-        app:layout_constraintVertical_bias="1.0" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8">
+        <ImageButton
+            android:id="@+id/b500"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/fivehundred"
+            android:layout_weight="2"
+            android:background="#BFFBBE"/>
 
-</android.support.constraint.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/b100"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/onehundred"
+            android:layout_weight="2"
+            android:background="#BFFBBE"/>
+
+        <ImageButton
+            android:id="@+id/b10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ten"
+            android:layout_weight="2"
+            android:background="#BFFBBE"/>
+
+        <ImageButton
+            android:id="@+id/b1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/one"
+            android:layout_weight="2"
+            android:background="#BFFBBE" />
+
+
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
