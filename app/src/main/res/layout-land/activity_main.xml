@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#BFFBBE">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFFBBE"
     android:orientation="vertical">
 
 
@@ -26,14 +26,15 @@
         android:text="5000"
         android:textSize="20sp"
         android:layout_weight="1" />
+
     <ImageButton
         android:id="@+id/ballin"
         android:layout_width="70dp"
-        android:layout_height="108dp"
-        android:src="@drawable/allin"
-        android:text="All in"
+        android:layout_height="80dp"
         android:layout_weight="3.5"
-        android:background="#BFFBBE" />
+        android:background="#BFFBBE"
+        android:src="@drawable/allin"
+        android:text="All in" />
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +45,7 @@
             android:layout_width="match_parent"
             android:text="All in"
             android:textColor="#000"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
             android:gravity="center"/>
     </LinearLayout>
@@ -52,23 +53,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="3">
+
     <ImageButton
         android:id="@+id/breset"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
         android:layout_weight="1"
-        android:background="#BFFBBE"/>
+        android:background="#BFFBBE"
+        android:paddingStart="15dp"
+        android:src="@drawable/reset" />
+
     <ImageView
         android:id="@+id/bmycoin"
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="75dp"
         android:layout_weight="1"
-        android:background="#BFFBBE"/>
+        android:background="#BFFBBE"
+        android:paddingStart="35dp" />
     <ImageButton
         android:id="@+id/bdeal"
-        android:layout_width="111dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
         android:src="@drawable/deal"
         android:layout_weight="1"
         android:background="#BFFBBE"/>
@@ -77,69 +82,75 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3">
+
         <TextView
             android:id="@+id/treset"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:gravity="center"
             android:text="Reset"
             android:textColor="#000"
-            android:textSize="30dp"
-            android:layout_weight="0.85"
-            android:gravity="center"/>
+            android:textSize="20dp"
+            android:paddingStart="18dp"/>
+
         <TextView
             android:id="@+id/gamemoney"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="24dp"
-            android:text=""
+            android:layout_gravity="center"
             android:layout_weight="1.20"
             android:gravity="center"
-            android:layout_gravity="center"/>
+            android:text=""
+            android:paddingStart="10dp"/>
         <TextView
             android:id="@+id/tdeal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Deal"
             android:textColor="#000"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:layout_weight="0.85"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:paddingEnd="15dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="8">
+
         <ImageButton
             android:id="@+id/b500"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/fivehundred"
+            android:layout_height="75dp"
             android:layout_weight="2"
-            android:background="#BFFBBE"/>
+            android:background="#BFFBBE"
+            android:src="@drawable/fivehundred" />
 
         <ImageButton
             android:id="@+id/b100"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/onehundred"
+            android:layout_height="75dp"
             android:layout_weight="2"
-            android:background="#BFFBBE"/>
+            android:background="#BFFBBE"
+            android:src="@drawable/onehundred" />
 
         <ImageButton
             android:id="@+id/b10"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ten"
+            android:layout_height="75dp"
             android:layout_weight="2"
-            android:background="#BFFBBE"/>
+            android:background="#BFFBBE"
+            android:src="@drawable/ten" />
 
         <ImageButton
             android:id="@+id/b1"
             android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/one"
+            android:layout_height="75dp"
             android:layout_weight="2"
-            android:background="#BFFBBE" />
+            android:background="#BFFBBE"
+            android:src="@drawable/one" />
 
 
     </LinearLayout>

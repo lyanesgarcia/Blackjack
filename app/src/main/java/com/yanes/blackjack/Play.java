@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class Play extends Activity implements View.OnClickListener {
@@ -147,6 +150,11 @@ public class Play extends Activity implements View.OnClickListener {
 
 
             if (my_card_value > 21) {
+                 Button b3= (Button) findViewById(R.id.bstand);
+                b3.setVisibility(View.INVISIBLE);
+                 Button b1= (Button) findViewById(R.id.bhit);
+                b1.setVisibility(View.INVISIBLE);
+
                 igual = false;
                 AS = false;
 
@@ -172,12 +180,8 @@ public class Play extends Activity implements View.OnClickListener {
                 if (AS == false) {
 
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     back();
+
                 } else {
                     for(int i=0; i<my_ases_cards.size(); i++) {
                         if (my_card_value > 21) {
@@ -185,6 +189,7 @@ public class Play extends Activity implements View.OnClickListener {
                         }
                     }
                 }
+
             }
 
             mycards.setText("" + my_card_value);
@@ -193,14 +198,16 @@ public class Play extends Activity implements View.OnClickListener {
 
 
         } else if (view.getId() == R.id.bstand) {
+            Button b1 = (Button) findViewById(R.id.bhit);
+            b1.setVisibility(View.INVISIBLE);
+            Button b2 = (Button) findViewById(R.id.bdouble);
+            b2.setVisibility(View.INVISIBLE);
 
-
-            for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
                 if (cupier_card_value <= 16) {
                     ImageView imgc = (ImageView) findViewById(STATES2[i]);
                     i = cupier(imgc, i);
                 }
-
 
             }
 
@@ -214,12 +221,9 @@ public class Play extends Activity implements View.OnClickListener {
                     total_money += game_money * 2;
                 Toast.makeText(this, "Win", Toast.LENGTH_SHORT).show();
             }
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
             back();
+
 
         } else if (view.getId() == R.id.bdouble) {
 
@@ -275,12 +279,9 @@ public class Play extends Activity implements View.OnClickListener {
             } else if(my_card_value>21){
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
                     total_money -= game_money;
-                try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                    back();
+
+                back();
+
 
             } else if ((cupier_card_value > my_card_value) && (cupier_card_value <= 21)) {
                     total_money -= game_money;
@@ -292,12 +293,8 @@ public class Play extends Activity implements View.OnClickListener {
             }else{
                 Toast.makeText(this,"Error", Toast.LENGTH_LONG).show();
             }
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             back();
+
         }
 
     }
@@ -309,8 +306,9 @@ public class Play extends Activity implements View.OnClickListener {
         String str_total = Integer.toString(total_money);
         str_total = str_total.trim();
         MainActivity.STotalMoney = str_total;
-        Intent intent1 = new Intent(this, MainActivity.class);
-        intent1.putExtra(MainActivity.STotalMoney, str_total);
+
+       Intent intent1 = new Intent(this, MainActivity.class);
+       intent1.putExtra(MainActivity.STotalMoney, str_total);
         game_money = 0;
         String game = Integer.toString(game_money);
         MainActivity.SGameMoney = game;
@@ -321,7 +319,13 @@ public class Play extends Activity implements View.OnClickListener {
         cupiercards.setText("" + cupier_card_value);
 
         setResult(RESULT_OK, intent1);
-        super.onBackPressed();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Play.this.finish();
+            }
+        }, 3000);
+
     }
 
     public void azar() {
