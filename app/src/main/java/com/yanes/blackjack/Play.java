@@ -150,10 +150,7 @@ public class Play extends Activity implements View.OnClickListener {
 
 
             if (my_card_value > 21) {
-                 Button b3= (Button) findViewById(R.id.bstand);
-                b3.setVisibility(View.INVISIBLE);
-                 Button b1= (Button) findViewById(R.id.bhit);
-                b1.setVisibility(View.INVISIBLE);
+
 
                 igual = false;
                 AS = false;
@@ -178,7 +175,10 @@ public class Play extends Activity implements View.OnClickListener {
                  }
                 }
                 if (AS == false) {
-
+                    Button b3= (Button) findViewById(R.id.bstand);
+                    b3.setVisibility(View.INVISIBLE);
+                    Button b1= (Button) findViewById(R.id.bhit);
+                    b1.setVisibility(View.INVISIBLE);
                     Toast.makeText(this, "LOST", Toast.LENGTH_SHORT).show();
                     back();
 

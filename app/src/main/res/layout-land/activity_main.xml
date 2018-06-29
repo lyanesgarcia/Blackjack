@@ -23,7 +23,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="5000"
+        android:text="200"
         android:textSize="20sp"
         android:layout_weight="1" />
 
@@ -120,21 +120,14 @@
         android:layout_height="wrap_content"
         android:weightSum="8">
 
-        <ImageButton
-            android:id="@+id/b500"
-            android:layout_width="80dp"
-            android:layout_height="75dp"
-            android:layout_weight="2"
-            android:background="#BFFBBE"
-            android:src="@drawable/fivehundred" />
 
         <ImageButton
-            android:id="@+id/b100"
+            android:id="@+id/b50"
             android:layout_width="80dp"
             android:layout_height="75dp"
             android:layout_weight="2"
             android:background="#BFFBBE"
-            android:src="@drawable/onehundred" />
+            android:src="@drawable/fifty" />
 
         <ImageButton
             android:id="@+id/b10"
@@ -143,6 +136,13 @@
             android:layout_weight="2"
             android:background="#BFFBBE"
             android:src="@drawable/ten" />
+        <ImageButton
+            android:id="@+id/b5"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_weight="2"
+            android:background="#BFFBBE"
+            android:src="@drawable/five" />
 
         <ImageButton
             android:id="@+id/b1"

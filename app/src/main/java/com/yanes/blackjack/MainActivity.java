@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public static String SGameMoney = "smoney";
     public static String STotalMoney = "tmoney";
 
-    private int total_money=5000;
+    private int total_money=200;
     private int game_money=0;
 
 
@@ -37,9 +37,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         button2.setOnClickListener(this);
         ImageButton button3 = (ImageButton) findViewById(R.id.breset);
         button3.setOnClickListener(this);
-        ImageButton button4 = (ImageButton) findViewById(R.id.b500);
+        ImageButton button4 = (ImageButton) findViewById(R.id.b5);
         button4.setOnClickListener(this);
-        ImageButton button5 = (ImageButton) findViewById(R.id.b100);
+        ImageButton button5 = (ImageButton) findViewById(R.id.b50);
         button5.setOnClickListener(this);
         ImageButton button6 = (ImageButton) findViewById(R.id.b10);
         button6.setOnClickListener(this);
@@ -84,15 +84,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             game_money=0;
             image.setImageResource(0);
 
-        } else if (view.getId() == R.id.b500 && total_money>=500) {
+        } else if (view.getId() == R.id.b5 && total_money>=5) {
 
-            image.setImageResource(R.drawable.fivehundred);
-            total_money=total_money-500;
-            game_money=game_money+500;
-        } else if (view.getId() == R.id.b100 && total_money>=100) {
-            image.setImageResource(R.drawable.onehundred);
-            total_money=total_money-100;
-            game_money=game_money+100;
+            image.setImageResource(R.drawable.five);
+            total_money=total_money-5;
+            game_money=game_money+5;
+        } else if (view.getId() == R.id.b50 && total_money>=50) {
+            image.setImageResource(R.drawable.fifty);
+            total_money=total_money-50;
+            game_money=game_money+50;
         } else if (view.getId() == R.id.b10 && total_money>=10) {
             image.setImageResource(R.drawable.ten);
             total_money=total_money-10;
