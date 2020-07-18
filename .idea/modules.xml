@@ -3,13 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Blackjack.iml" filepath="$PROJECT_DIR$/Blackjack.iml" />
-      <module fileurl="file://C:\Users\claud\Desktop\entregar\Blackjack\Blackjack.iml" filepath="C:\Users\claud\Desktop\entregar\Blackjack\Blackjack.iml" />
-      <module fileurl="file://C:\Users\LidiayClaudia\Desktop\fin\Blackjack\Blackjack.iml" filepath="C:\Users\LidiayClaudia\Desktop\fin\Blackjack\Blackjack.iml" />
-      <module fileurl="file://C:\Users\claud\Desktop\CY\Blackjack\Blackjack.iml" filepath="C:\Users\claud\Desktop\CY\Blackjack\Blackjack.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\claud\Desktop\entregar\Blackjack\app\app.iml" filepath="C:\Users\claud\Desktop\entregar\Blackjack\app\app.iml" />
-      <module fileurl="file://C:\Users\claud\Desktop\CY\Blackjack\app\app.iml" filepath="C:\Users\claud\Desktop\CY\Blackjack\app\app.iml" />
-      <module fileurl="file://C:\Users\LidiayClaudia\Desktop\fin\Blackjack\app\app.iml" filepath="C:\Users\LidiayClaudia\Desktop\fin\Blackjack\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -51,12 +51,5 @@
             android:text="Claudia Yanes Garcia \n
     cyanesgarcia" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="10dp"
-        android:text="This project is the first assignment for CSCI 4020, the second course of Mobile App"
-        />
+    
 </LinearLayout>
